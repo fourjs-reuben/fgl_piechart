@@ -35,6 +35,8 @@ DEFINE bbox RECORD
     x,y,width,height FLOAT
 END RECORD
 
+(Change to update language)
+
 CALL ui.Interface.frontCall("webcomponent","call",["formonly.wc","get_bbox","myrootsvg",SFMT("legend_%1", pie.data[i,1])],bbox_result)                   
 TRY
     CALL util.JSON.parse(bbox_result, bbox)
